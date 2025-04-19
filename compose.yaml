@@ -1,0 +1,8 @@
+services:
+    builder:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+        - ./qmk_firmware/keyboards/keyball:/root/qmk_firmware/keyboards/keyball
+        - ./.build:/root/qmk_firmware/.build

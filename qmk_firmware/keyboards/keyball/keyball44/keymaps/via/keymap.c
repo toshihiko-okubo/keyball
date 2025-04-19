@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM btn1_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM btn2_combo[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM btn3_combo[] = {KC_H, KC_K, COMBO_END};
+const uint16_t PROGMEM btn3_combo[] = {KC_H, KC_J, COMBO_END};
 combo_t key_combos[] = {
     COMBO(btn1_combo, KC_BTN1),
     COMBO(btn2_combo, KC_BTN2),
@@ -42,21 +42,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = LAYOUT_universal(
     _______ ,  S(KC_1) , S(KC_2)  , S(KC_3) , S(KC_4)  , S(KC_5)  ,                                         S(KC_6)       , S(KC_7)       ,S(KC_8)        ,S(KC_9)   ,S(KC_0)  ,KC_BSLS   ,
     _______ ,  KC_NO   , KC_PGUP  , KC_UP   , KC_PGDN  ,  KC_NO   ,                                         KC_BTN3       , KC_BTN1       ,KC_BTN2        ,S(KC_LBRC),S(KC_RBRC),S(KC_BSLS),
-    _______ ,  KC_NO   , KC_LEFT  , KC_DOWN , KC_RGHT  ,  KC_NO   ,                                         MT(MOD_LCTL, KC_TAB),MT(MOD_LALT, KC_LEFT),MT(MOD_LALT, KC_RGHT),KC_LBRC   ,KC_RBRC   , _______  ,
+    _______ ,  KC_NO   , KC_LEFT  , KC_DOWN , KC_RGHT  ,  KC_NO   ,                                         LCTL(KC_TAB), LALT(KC_LEFT ), LALT(KC_RGHT),KC_LBRC   ,KC_RBRC   , _______  ,
                   _______  , _______ , _______  ,         _______  , _______  ,                   _______  , _______  , _______       , _______  , _______
   ),
 
   [2] = LAYOUT_universal(
-    KC_ESC   ,KC_NO, KC_7     , KC_8    , KC_9     , KC_PSCR  ,                                         KC_F9     , KC_F10  , KC_F11   , KC_F12   , KC_NO  , KC_NO  ,
-    _______  ,KC_NO, KC_4     , KC_5    , KC_6     , _______  ,                                         KC_F5     , KC_F6   , KC_F7    , KC_F8    , KC_NO  , KC_NO  ,
-    _______  ,KC_NO, KC_1     , KC_2    , KC_3     , KC_0     ,                                         KC_F1     , KC_F2   , KC_F3    , KC_F4    , KC_NO  , KC_NO  ,
+    KC_ESC   ,KC_NO, KC_7     , KC_8    , KC_9     , KC_PSCR  ,                                             KC_NO  , KC_F9     , KC_F10  , KC_F11   , KC_F12   , KC_NO  ,
+    _______  ,KC_NO, KC_4     , KC_5    , KC_6     , KC_NO    ,                                             KC_NO  , KC_F5     , KC_F6   , KC_F7    , KC_F8    , KC_NO  ,
+    _______  ,KC_NO, KC_1     , KC_2    , KC_3     , KC_0     ,                                             KC_NO  , KC_F1     , KC_F2   , KC_F3    , KC_F4    , KC_NO  ,
                   KC_0     , KC_DOT  , _______  ,         _______  , _______  ,                   KC_DEL   , _______  , _______       , _______  , KC_NO
   ),
 
   [3] = LAYOUT_universal(
-    RGB_TOG  , AML_TO   , AML_I50  , AML_D50  , _______  , _______  ,                                        RGB_M_P  , RGB_M_B  , RGB_M_R  , RGB_M_SW , RGB_M_SN , RGB_M_K  ,
-    RGB_MOD  , RGB_HUI  , RGB_SAI  , RGB_VAI  , _______  , SCRL_DVI ,                                        RGB_M_X  , RGB_M_G  , RGB_M_T  , RGB_M_TW , _______  , _______  ,
-    RGB_RMOD , RGB_HUD  , RGB_SAD  , RGB_VAD  , _______  , SCRL_DVD ,                                        CPI_D1K  , CPI_D100 , CPI_I100 , CPI_I1K  , _______  , KBC_SAVE ,
+    RGB_TOG  , SSNP_FRE   , AML_I50  , AML_D50  , _______  , _______  ,                                        RGB_M_P  , RGB_M_B  , RGB_M_R  , RGB_M_SW , RGB_M_SN , RGB_M_K  ,
+    RGB_MOD  , SSNP_VRT  , RGB_SAI  , RGB_VAI  , _______  , SCRL_DVI ,                                        RGB_M_X  , RGB_M_G  , RGB_M_T  , RGB_M_TW , _______  , _______  ,
+    RGB_RMOD , SSNP_HOR  , RGB_SAD  , RGB_VAD  , _______  , SCRL_DVD ,                                        CPI_D1K  , CPI_D100 , CPI_I100 , CPI_I1K  , _______  , KBC_SAVE ,
                   QK_BOOT  , KBC_RST  , _______  ,        _______  , _______  ,                   _______  , _______  , _______       , KBC_RST  , QK_BOOT
   ),
 };
